@@ -6,13 +6,15 @@ Any questions please email devhelp@autoura.com
 
 ### Authentication
 
-You should have an API key 
+You should have an API key which needs to be set in an Authorization header, preceded with Bearer and a space.
 
-    Authorization: API_KEY
+    Authorization: Bearer API_KEY
     
 In Axios, we would set something like
 
     config.headers.Authorization = 'Bearer API_KEY'
+    
+The API key is expected to be used within mobile apps and other client side code (e.g. JavaScript). There is no method to access customer details or other GDPR related information with this API key.  
     
 ### Stops & Routes
 
