@@ -116,6 +116,51 @@ group_context can be:
 
 For example if you search using group_context kids, alcohol experiences will not be shown
 
+### Images
+
+Images are served using Cloudinary.
+
+You can find out more about how to use the image APIs here. Plenty of opportunity for a lot of interesting effects etc with images
+
+https://cloudinary.com/documentation/image_transformation_reference
+
+Or just serve picture/url response field
+
+### Creating a card design
+
+This is a very rough Vue / Bootstrap example but should give you a feel as to how to create a nice card like this:
+
+![](card_design.png)
+
+      <div class="row py-0 animated fadeIn fadeOut">
+
+        <template v-for="(search_row,index) in **** SEARCH RESULTS ****">
+
+          <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-1 my-2">
+
+            <div class="card" style="max-width:350px; height:100%; cursor:pointer; will-change:auto;">
+              <!-- INSERT IMAGE -->
+              <div class="card-body pb-0">
+                <h5 class="mb-1">{{search_row.name}}</h5>
+                <h6>{{search_row.location.name}}</h6>
+                <p style="font-size:95%; line-height:1.3em; white-space: pre-wrap" class="mb-0">{{search_row.summary}}</p>
+              </div>
+
+              <div class="card-footer bg-transparent border-top-0 pt-0">
+                <button class="float-right btn btn-primary ml-2 btn-sm">Book</button>
+
+                <h6><span v-if="search_row.price_retail.show_from_word"
+                          class="small">from </span>{{search_row.price_retail.from_price}} {{search_row.price_retail.currency}} <span class="small">/ {{search_row.price_retail.rate_label}}</span></h6>
+              </div>
+            </div>
+
+          </div>
+
+        </template>
+      </div>
+
+
+
 ## Good data
 
 Good data for things do do can be found in London and Cape Town.
