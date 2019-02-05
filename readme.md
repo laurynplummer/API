@@ -171,6 +171,4 @@ This is a very rough Vue / Bootstrap example but should give you a feel as to ho
 
 ## Good data
 
-Good data for things do do can be found in London and Cape Town.
-
-(London data coming Thursday / Friday 31st Jan / 1st Feb)
+Good data for things do do can be found in London (food) and Cape Town (tours).
