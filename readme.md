@@ -15,7 +15,13 @@ In Axios, we would set something like
     config.headers.Authorization = 'Bearer API_KEY'
     
 The API key is expected to be used within mobile apps and other client side code (e.g. JavaScript). There is no method to access customer details or other GDPR related information with this API key.  
-    
+
+You can test that you are correctly authorising by calling the WhoAmI endpoint
+
+    https://api.autoura.com/api/whoami
+        
+Other APIs may be cached hence may appear they work. The WhoAmI endpoint is not cached so will be a true test for your connection.
+        
 ### Stops & Routes
 
 Autoura is designed around autonomous vehicle sightseeing and other modes of transport (bike / scooter / walking etc)
