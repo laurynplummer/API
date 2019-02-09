@@ -110,6 +110,8 @@ For example, if you want to search for things open in the evening
 
     &time_start=17:30&time_end=23:00
 
+**Think of this as 3 modes. No date. Date. Date & time. i.e. to search by time, you must also search by date (or date range)**
+
 #### Group context
 
 group_context can be:
